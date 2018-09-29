@@ -1,0 +1,9 @@
+---
+- hosts: dev
+  become: yes # sudo have been deprecated, use become
+  # become_user: root # default
+# NOTE: if you can ssh as root
+# remote_user: root
+  tasks:
+    - name: test connection
+      ping:
